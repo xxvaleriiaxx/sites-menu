@@ -1,0 +1,145 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(180deg, #2c3e1e 0%, #4a5f3a 100%);
+    color: #e8e0c8;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.container { max-width: 1300px; margin: 0 auto; }
+
+.title {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+    color: #d4b88a;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+.city {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    height: 520px;
+    position: relative;
+}
+
+.building {
+    background: linear-gradient(#5c6b4a, #3f4a32);
+    border: 8px solid #8b6f47;
+    border-radius: 8px 8px 0 0;
+    width: 340px;
+    padding: 25px 20px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.7);
+    position: relative;
+    transition: transform 0.4s;
+}
+
+.building:hover { transform: translateY(-15px); }
+
+.building h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.6rem;
+    color: #e8d9b0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.icons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.icon {
+    width: 88px;
+    height: 88px;
+    background: #f4e9d2;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+    transition: all 0.3s;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+    box-shadow: 0 15px 30px rgba(139, 111, 71, 0.6);
+}
+
+.icon img {
+    width: 68px;
+    height: 68px;
+    object-fit: contain;
+}
+
+/* Предпросмотр при наведении */
+.preview {
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(60, 70, 50, 0.97);
+    padding: 18px 35px;
+    border: 6px solid #8b6f47;
+    border-radius: 12px;
+    font-size: 1.45rem;
+    color: #e8d9b0;
+    white-space: nowrap;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+    z-index: 100;
+    opacity: 0;
+    transition: all 0.3s;
+    pointer-events: none;
+}
+
+/* Выбранные сайты */
+.selected-panel {
+    margin-top: 60px;
+    background: rgba(60, 70, 50, 0.95);
+    border: 6px solid #8b6f47;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.selected-panel h2 {
+    text-align: center;
+    color: #d4b88a;
+    margin-bottom: 25px;
+}
+
+#selected-list {
+    list-style: none;
+}
+
+#selected-list li {
+    padding: 14px 20px;
+    background: #4a5f3a;
+    margin: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+#selected-list li:hover {
+    background: #5c6b4a;
+}
+
+.clear-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #9c4a4a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1rem;
+}

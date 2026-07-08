@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наши достижения</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="title">Наши достижения</h1>
+
+    <div class="city">
+        <div class="building left-building">
+            <h2>Услуги</h2>
+            <div class="icons-container" id="services"></div>
+        </div>
+        <div class="building center-building">
+            <h2>Маркетплейсы</h2>
+            <div class="icons-container" id="marketplace"></div>
+        </div>
+        <div class="building right-building">
+            <h2>Интернет-магазины</h2>
+            <div class="icons-container" id="store"></div>
+        </div>
+    </div>
+
+    <div id="preview" class="preview"></div>
+
+    <div class="selected-panel">
+        <h2>Выбранные сайты</h2>
+        <ul id="selected-list"></ul>
+        <button onclick="clearSelected()" class="clear-btn">Очистить список</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
